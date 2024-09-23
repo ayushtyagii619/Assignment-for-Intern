@@ -1,0 +1,25 @@
+<!-- templates/course_detail.html -->
+<div class="course-detail">
+    <h1>Course/{{ course_id }}</h1>
+  
+    <!-- Video Player Section -->
+    <div class="video-player">
+      <video controls src="{{ selected_video.video_url }}">
+        Your browser does not support the video tag.
+      </video>
+      <h2>{{ selected_video.video_title }}</h2>
+      <p>{{ selected_video.video_description }}</p>
+    </div>
+  
+    <!-- Video List Section -->
+    <div class="video-list">
+      <ul>
+        {% for video in filters %}
+          <li>
+            <a href="?video_id={{ video.video_id }}">{{ video.video_title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  

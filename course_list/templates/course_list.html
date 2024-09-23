@@ -1,0 +1,27 @@
+<div class="container">
+    <h1>Available Courses</h1>
+    <div class="filters">
+        <!-- Filter options from facets -->
+        <h3>Filters</h3>
+        {% for filter, options in filters.items %}
+            <h4>{{ filter }}</h4>
+            <ul>
+                {% for option in options %}
+                    <li>{{ option.key }} ({{ option.doc_count }})</li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    </div>
+    
+    <div class="courses">
+        <!-- List all courses -->
+        {% for course in courses %}
+            <div class="course">
+                <img src="{{ course.image_url }}" alt="Thumbnail">
+                <h2>{{ course.course_name }}</h2>
+                <p>{{ course.course_description }}</p>
+                <a href="{% url 'course-detail' course.course_id %}">View Course</a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
