@@ -34,24 +34,24 @@ This Django project demonstrates how to display a list of courses with filtering
 - Postman (for testing APIs)
 
 ### Step 1: Clone the repository
-```bash
+bash
 git clone https://github.com/yourusername/django-course-api.git
 cd django-course-api
 
 ### Step 2: Create and activate a virtual environment
-```bash
+bash
 Copy code
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ### Step 3: Install required packages
-```bash
+bash
 Copy code
 pip install -r requirements.txt
 ### Step 4: Migrate the database (if applicable)
-```bash
+bash
 Copy code
 python manage.py migrate
 ### Step 5: Run the Django server
-```bash
+bash
 Copy code
 python manage.py runserver
