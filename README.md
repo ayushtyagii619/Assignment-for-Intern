@@ -8,9 +8,7 @@ This Django project demonstrates how to display a list of courses with filtering
 - [Installation](#installation)
 - [Project Structure](#project-structure)
 - [Usage](#usage)
-- [API Endpoints](#api-endpoints)
-- [Testing the API with Postman](#testing-the-api-with-postman)
-- [License](#license)
+- [URLS](#urls)
 
 ## Features
 - List of courses with filtering options (language, subject, etc.).
@@ -84,10 +82,9 @@ The course list page displays all available courses fetched from the simulated A
 ### Course Detail
 When a course is selected from the list, the course detail page shows a list of videos for that course, fetched from the get_course_detail_API_response.json file. Users can play a video directly by clicking on the provided YouTube link.
 
-### urls:
+## urls:
 - For the course list:
 GET http://127.0.0.1:8000/
 - For course details:
 GET http://127.0.0.1:8000/<int:course_id>/
-### View the response: 
-The JSON response with course data will be displayed in the Postman response window.
+
