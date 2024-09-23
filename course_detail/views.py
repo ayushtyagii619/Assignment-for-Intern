@@ -4,13 +4,11 @@ import os
 import json
 
 def course_detail(request, course_id):
-    file_path = os.path.join(settings.BASE_DIR, 'D:\Django\LueinAnalytics Assignment\get_course_detail_API_response.json')
+    file_path = os.path.join(settings.BASE_DIR, 'get_course_detail_API_response.json')
     
-    # Load JSON data
+    
     with open(file_path, 'r') as f:
         data = json.load(f)
-
-    # Check if the course_id matches the provided course_id
     course_id = data['course_id']
     filters = data['videos']
     

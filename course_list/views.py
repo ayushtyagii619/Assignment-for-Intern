@@ -5,13 +5,12 @@ from django.conf import settings
 from django.http import JsonResponse
 
 def course_list(request):
-    file_path  = os.path.join(settings.BASE_DIR,'D:\Django\LueinAnalytics Assignment\get_all_courses_API_response.json')
+    file_path  = os.path.join(settings.BASE_DIR,'get_all_courses_API_response.json')
     with open(file_path,'r') as f:
         data  = json.load(f)
         courses = data['courses']
-    filters = data['facets']  # Use filters for facets (course language, subject, etc.)
+    filters = data['facets'] 
 
-    # Return JSON response for API testing
     context = {
         'courses': courses,
         'filters': filters
